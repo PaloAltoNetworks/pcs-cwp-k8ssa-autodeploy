@@ -1,6 +1,6 @@
 $SERVICE_ACCOUNT_NAME="twistlock-service-account"
 $CONTEXT=$(kubectl config current-context --insecure-skip-tls-verify)
-$NAMESPACE="twistlock"
+$NAMESPACE="twistlock-sa"
 $NEW_CONTEXT="twistlock-context"
 $KUBECONFIG_FILE="kubeconfig-sa"
 
