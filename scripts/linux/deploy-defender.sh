@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 #Generate Console TOKEN
-CONSOLE_TOKEN=$(curl -k ${COMPUTE_API_ENDPOINT}/api/v1/authenticate -X POST -H "Content-Type: application/json" -d '{
-  "username":"'"$PRISMA_USERNAME"'",
-  "password":"'"$PRISMA_PASSWORD"'"
+CONSOLE_TOKEN=$(curl -k ${CONSOLE_URL}/api/v1/authenticate -X POST -H "Content-Type: application/json" -d '{
+  "username":"'"$USERNAME"'",
+  "password":"'"$PASSWORD"'"
   }'  | grep -Po '"'"token"'"\s*:\s*"\K([^"]*)')
 
 #Deploy defender
